@@ -1,0 +1,146 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+  color: #333;
+}
+
+.header {
+  background: #f44336;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 15px;
+}
+
+.task-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.task-inputs input,
+.task-inputs button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.task-inputs input[type="text"] {
+  width: 40%;
+}
+
+.task-inputs input[type="date"] {
+  width: 20%;
+}
+
+.addBtn {
+  background: white;
+  color: #f44336;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background: #ffe5e5;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.card p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.controls label {
+  font-weight: bold;
+}
+
+.controls select {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.deleteAllBtn {
+  background: #c62828;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteAllBtn:hover {
+  background: #a41414;
+}
+
+.table-container {
+  padding: 20px;
+}
+
+#taskTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#taskTable th, #taskTable td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+#taskTable th {
+  background: #f44336;
+  color: white;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.deleteBtn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.deleteBtn:hover {
+  background: darkred;
+}
