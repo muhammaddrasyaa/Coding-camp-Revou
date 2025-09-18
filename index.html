@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To do it</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1>To-do list</h1>
+    <div class="task-inputs">
+      <input type="text" id="taskInput" placeholder="Enter new task...">
+      <input type="date" id="dueDateInput">
+      <button onclick="addTask()" class="addBtn">Add Task</button>
+    </div>
+  </div>
+
+  <!-- Dashboard Cards -->
+  <div class="stats">
+    <div class="card">
+      <h3>Total Tasks</h3>
+      <p id="totalTasks">0</p>
+    </div>
+    <div class="card">
+      <h3>Completed</h3>
+      <p id="completedTasks">0</p>
+    </div>
+    <div class="card">
+      <h3>Pending</h3>
+      <p id="pendingTasks">0</p>
+    </div>
+    <div class="card">
+      <h3>Progress</h3>
+      <p id="progressPercent">0%</p>
+    </div>
+  </div>
+
+  <!-- Filter & Sort -->
+  <div class="controls">
+    <div class="filters">
+      <label>Filter: </label>
+      <select id="filter" onchange="applyFilter()">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+      </select>
+    </div>
+
+    <div class="sorts">
+      <label>Sort: </label>
+      <select id="sort" onchange="applySort()">
+        <option value="task">Task</option>
+        <option value="due">Due Date</option>
+        <option value="status">Status</option>
+      </select>
+    </div>
+
+    <button onclick="deleteAll()" class="deleteAllBtn">🗑 Delete All</button>
+  </div>
+
+  <!-- Task Table -->
+  <div class="table-container">
+    <table id="taskTable">
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="taskBody">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
